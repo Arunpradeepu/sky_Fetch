@@ -1,0 +1,63 @@
+body{
+    background-color: rgba(24, 157, 205, 0.728);
+    font-family: sans-serif;
+}
+.app{
+    background-image: url(cloud-pictures.jpg);
+    min-height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+.left{
+    color: black;
+    align-items: baseline;
+    margin-top: 30%;
+}
+.right{
+    color: black;
+    background-color: rgba(85, 111, 126, 0.3);
+    height: 645px;;
+}
+input{
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 25px;
+    border-radius: 4px;
+  
+    padding:  4px 4px 4px 10px;
+    color:rgb(255, 255, 255);
+    
+}
+button{
+    height: 37px;
+    border-radius:4px ;
+    padding: 10px;
+}
+li{
+    padding: 3%;
+}
+hr{
+    margin: 5%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.cloud-right,.humid-right,.wind-right {
+    text-align: right;
+    width: 70px; /* Adjust the width as needed */
+}
+li:hover{
+    font-weight:bolder;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#cel{
+    font-size: 100px;
+}

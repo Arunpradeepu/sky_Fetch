@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SkyFetch </title>
+    <link rel="stylesheet" href="main.css">
+<style>
+ .container {
+        display: flex; 
+        justify-content: space-between; 
+        width: 100%; 
+        margin: 0 auto; 
+    }
+    
+    .left, .right {
+        width: 45%;
+       
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    @media (max-width:600px) {
+        .container{
+            flex-direction: column;
+            
+        }
+        .left{
+            margin-top: 0%;
+            
+        }
+        .right{
+            width: 100%;
+            border-radius: 10px;
+            height: max-content;
+        }
+        li{
+            padding:  0% 2% 2% 2%;
+        }
+        hr{
+            margin: 0%;
+        }
+    }
+
+
+</style>
+
+</head>
+
+<body  class="app" >
+    <div class="weather_app">
+        
+
+<div class="container">
+    <span style="color: black; padding:2% 2%; font-size: 20px;">SkyFetch</span>
+<div class="left">
+<span  id="temperature" class="temperature" style="font-size: 86px;">16</span><span id="cel">&deg;</span>
+<span id="city" style="font-size: 33px;">London</span><img class="icon" src="sun.png" width="60px" height="50px"><br>
+ <div style="font-size: 15px;">
+
+<span id="description" class="conditioin">cloudy</span>
+</div>
+</div>
+<div class="right">
+<form id="weatherForm" class="weather form">
+    <input type="text" id="query" placeholder="Search Location" class="cityInput">
+    <button type="submit" class="search-btn">Search</button>
+    
+<hr>
+</form>
+<ul>
+     <li id="city1" >Chennai</li>
+     <li id="city2">California</li>
+     <li id="city3">Paris</li>
+     <li id="city4">Tokyo</li>
+    
+</ul>
+<hr>
+<div class="wea">
+    <h2>Weather Details</h2>
+    <ul>
+        <li>Pressure (hPa) <span id="pressure" class="cloud-right">89%</span></li>
+        <li>Humidity (%)<span id="humidity" class="humid-right">65%</span></li>
+        <li>Wind (km/hr)<span id="windSpeed" class="wind-right">8 </span></li>
+    </ul>
+    <hr>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+    var cityName1=document.getElementById("city1");
+    var cityName2=document.getElementById("city2");
+    var cityName3=document.getElementById("city3");
+    var cityName4=document.getElementById("city4");
+    cityName1.onclick=func1;
+    cityName2.onclick=func2;
+    cityName3.onclick=func3;
+    cityName4.onclick=func4;
+    function func1(){
+        fetchWeather(cityName1.textContent);
+    }
+    function func2(){
+        fetchWeather(cityName2.textContent);
+    }
+    function func3(){
+        fetchWeather(cityName3.textContent);
+    }
+    function func4(){
+        fetchWeather(cityName4.textContent);
+    }
+</script>
+<script src="index.js"></script>
+</body>
+</html>
